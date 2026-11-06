@@ -5,7 +5,7 @@ const D = __dirname;
 const data = JSON.parse(fs.readFileSync(path.join(D, "teams.json"), "utf8"));
 const svg = (f) => fs.readFileSync(path.join(D, "assets", f), "utf8").trim();
 const LOGO = svg("logo-2ndlab.svg");
-const DEPT = svg("logo-hongik-dc.svg");
+const DEPT = svg("logo-hongik-dc-alt.svg");
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const pad = (n) => String(n).padStart(2, "0");
 const T = data.teams;

@@ -60,7 +60,7 @@ svg { display: block; width: 100%; height: auto; }
   text-align: center;
 }
 .home .mark { width: clamp(200px, 30vw, 360px); view-transition-name: mark; }
-.home .dept { width: clamp(84px, 8vw, 108px); margin-top: clamp(40px, 7vh, 64px); }
+.home .dept { width: clamp(120px, 12vw, 156px); margin-top: clamp(40px, 7vh, 64px); }
 .home .intro { margin-top: clamp(36px, 6vh, 56px); color: var(--ink); opacity: .72; font-weight: 300; max-width: 30em; }
 .home .intro { text-wrap: balance; }
 .home .intro span { display: block; }
