@@ -27,6 +27,7 @@ const head = (title, desc, root) => `<!doctype html>
 
 const foot = (root) => `<footer class="foot mono rv" style="--i:9">
   <span>${esc(data.site.footer)}</span>
+</footer>
 <script src="${root}assets/site.js" defer></script>
 </body>
 </html>
