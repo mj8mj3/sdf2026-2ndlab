@@ -19,8 +19,7 @@
   });
 
   // Video facade: load the player only when asked
-  const film = document.querySelector(".film");
-  if (!film) return;
+  document.querySelectorAll(".film").forEach((film) => {
   const src = film.dataset.video || "";
   const btn = film.querySelector(".play");
   if (!src) return;
@@ -50,4 +49,5 @@
     el.title = film.getAttribute("aria-label") || "영상";
     film.replaceChildren(el);
   }, { once: true });
+  });
 })();

@@ -71,8 +71,10 @@ for (const t of T) {
     <button class="play" type="button" disabled><span class="tri"></span><span class="lbl ko">영상 준비 중</span></button>
   </figure>
   <section class="about rv" style="--i:4">
-    <div><p class="lead">${esc(t.summary)}</p><p class="body">${esc(t.body)}</p></div>
-    <dl>${members}</dl>
+    <figure class="film reel" data-video="${esc(t.brandFilm || "")}" aria-label="${t.no}조 브랜드 필름">
+      <button class="play" type="button" disabled><span class="tri"></span><span class="lbl ko">브랜드 필름 준비 중</span></button>
+    </figure>
+    <div class="text"><p class="lead">${esc(t.summary)}</p><p class="body">${esc(t.body)}</p><dl>${members}</dl></div>
   </section>
   <nav class="switch rv" style="--i:5" aria-label="다른 조 보기">
     <span class="label ko">다른 조 보기</span>

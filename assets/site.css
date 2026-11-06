@@ -160,9 +160,12 @@ svg, .mark img { display: block; width: 100%; height: auto; }
 .about {
   margin-top: clamp(40px, 7vh, 72px);
   display: grid;
-  grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
+  grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
+  align-items: start;
   gap: clamp(32px, 6vw, 96px);
 }
+.film.reel { margin-top: 0; aspect-ratio: 9 / 16; }
+.about .text dl { margin-top: 40px; }
 .about .lead { font-size: 18px; line-height: 1.75; font-weight: 400; letter-spacing: -0.02em; }
 .about .body { margin-top: 20px; opacity: .72; font-weight: 300; }
 .about dl { display: grid; grid-template-columns: auto 1fr; column-gap: 24px; row-gap: 10px; align-content: start; border-top: 1px solid var(--line); padding-top: 18px; }
@@ -210,6 +213,7 @@ svg, .mark img { display: block; width: 100%; height: auto; }
   .teams .tt { opacity: 1; transform: none; }
   .teams a::after { bottom: -1px; }
   .about { grid-template-columns: 1fr; }
+  .about .reel { order: 2; }
   .foot { flex-direction: column; gap: 6px; }
   .foot .keys { display: none; }
   .bar .mark { width: 72px; }
