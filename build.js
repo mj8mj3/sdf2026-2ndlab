@@ -29,8 +29,7 @@ const head = (title, desc, root) => `<!doctype html>
 
 const foot = (root) => `<footer class="foot mono rv" style="--i:9">
   <span>${esc(data.site.footer)}</span>
-  <span class="keys ko">${root === "./" ? "1–5 키로 이동" : "← → 이전·다음 &nbsp;·&nbsp; Esc 처음으로"}</span>
-</footer>
+${root === "./" ? `  <span class="keys ko">1–5 키로 이동</span>\n` : ""}</footer>
 <script src="${root}assets/site.js" defer></script>
 </body>
 </html>
