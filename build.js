@@ -69,7 +69,6 @@ for (const t of T) {
   </div>
   <figure class="film rv" style="--i:3" data-video="${esc(t.video || "")}" aria-label="${t.no}조 영상">
     <button class="play" type="button" disabled><span class="tri"></span><span class="lbl ko">영상 준비 중</span></button>
-    <figcaption class="mono">${pad(t.no)} — Film</figcaption>
   </figure>
   <section class="about rv" style="--i:4">
     <div><p class="lead">${esc(t.summary)}</p><p class="body">${esc(t.body)}</p></div>
