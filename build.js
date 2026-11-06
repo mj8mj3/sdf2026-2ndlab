@@ -4,7 +4,7 @@ const path = require("path");
 const D = __dirname;
 const data = JSON.parse(fs.readFileSync(path.join(D, "teams.json"), "utf8"));
 const svg = (f) => fs.readFileSync(path.join(D, "assets", f), "utf8").trim();
-const LOGO = svg("logo-2ndlab.svg");
+const LOGO = (root) => `<img src="${root}assets/logo-2ndlab.png" alt="" width="948" height="239" decoding="async">`;
 const DEPT = svg("logo-hongik-dc-alt.svg");
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const pad = (n) => String(n).padStart(2, "0");
@@ -40,7 +40,7 @@ const foot = (root) => `<footer class="foot mono rv" style="--i:9">
 const home = `${head(data.site.title, data.site.intro.join(" "), "./")}
 <body data-root="./">
 <main class="home">
-  <h1 class="mark rv" style="--i:0" aria-label="2nd LAB">${LOGO}</h1>
+  <h1 class="mark rv" style="--i:0" aria-label="2nd LAB">${LOGO("./")}</h1>
   <div class="dept rv" style="--i:2" role="img" aria-label="홍익대학교 디자인컨버전스학부">${DEPT}</div>
   <p class="intro rv" style="--i:3">${data.site.intro.map((l) => `<span>${esc(l)}</span>`).join("")}</p>
   <nav class="teams rv" style="--i:4" aria-label="조 선택">
@@ -61,7 +61,7 @@ for (const t of T) {
 <body data-root="${r}" data-team="${t.no}">
 <header class="bar">
   <a class="back ko" href="${r}" aria-label="처음으로 돌아가기"><i></i><span>처음으로</span></a>
-  <a class="mark" href="${r}" aria-label="2nd LAB 처음으로">${LOGO}</a>
+  <a class="mark" href="${r}" aria-label="2nd LAB 처음으로">${LOGO(r)}</a>
   <span class="count mono"><b>${pad(t.no)}</b> / ${pad(T.length)}</span>
 </header>
 <main class="team">
@@ -92,6 +92,4 @@ ${foot(r)}`;
   fs.writeFileSync(path.join(D, String(t.no), "index.html"), page);
 }
 
-// favicon = symbol "2" cropped from the logo viewBox is overkill; use a simple mark
-fs.writeFileSync(path.join(D, "assets", "favicon.svg"), LOGO.replace(/viewBox="[^"]*"/, "viewBox=\"-32 -0 220 220\"").replace(/currentColor/g, "#232323"));
 console.log("built: index.html + " + T.map((t) => t.no + "/").join(" "));
