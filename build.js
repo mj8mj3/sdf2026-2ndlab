@@ -38,7 +38,7 @@ const teamLogo = (t) => {
   const f = path.join(D, "assets", "teams", t.no + ".svg");
   const sr = `<span class="sr">${t.no}조</span>`;
   if (!fs.existsSync(f)) return `<span class="lg ph" aria-hidden="true"></span>${sr}`;
-  const s = fs.readFileSync(f, "utf8").replace(/<?xml[^>]*>/, "").replace(/<!--[sS]*?-->/g, "").trim();
+  const s = fs.readFileSync(f, "utf8").replace(/<\?xml[^>]*>/, "").replace(/<!--[\s\S]*?-->/g, "").trim();
   return `<span class="lg" aria-hidden="true">${s}</span>${sr}`;
 };
 
