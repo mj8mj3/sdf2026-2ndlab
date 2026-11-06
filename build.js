@@ -17,7 +17,7 @@ const head = (title, desc, root) => `<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
-<meta name="theme-color" content="#FAFAFA">
+<meta name="theme-color" content="#FCFCFC">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <link rel="icon" href="${root}assets/favicon.svg" type="image/svg+xml">

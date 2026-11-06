@@ -16,4 +16,4 @@
 - 조 페이지에서 ← → 이전·다음 조, Esc 처음으로
 
 ## 서체·색
-Noto Sans KR · JetBrains Mono / 배경 #FAFAFA · 글자 #232323
+Noto Sans KR · JetBrains Mono / 키컬러 — 배경 #FCFCFC · 글자 #101010 · 면 #F0EEE9(Cloud Dancer) · 포인트 #C4B6A0
