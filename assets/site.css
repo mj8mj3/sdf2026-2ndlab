@@ -166,8 +166,9 @@ svg, .mark img { display: block; width: 100%; height: auto; }
 .about .lead { font-size: 18px; line-height: 1.75; font-weight: 400; letter-spacing: -0.02em; }
 .about .body { margin-top: 20px; opacity: .72; font-weight: 300; }
 .about dl { display: grid; grid-template-columns: auto 1fr; column-gap: 24px; row-gap: 10px; align-content: start; border-top: 1px solid var(--line); padding-top: 18px; }
-.about dt { color: var(--sub); }
-.about dd { font-size: 14px; }
+.about dl { align-items: baseline; }
+.about dt { color: var(--sub); line-height: 24px; }
+.about dd { font-size: 14px; line-height: 24px; }
 
 .switch {
   margin-top: clamp(64px, 12vh, 128px);
