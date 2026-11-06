@@ -33,6 +33,15 @@ const foot = (root) => `<footer class="foot mono rv" style="--i:9">
 </html>
 `;
 
+// 조 로고: assets/teams/N.svg 가 있으면 그 로고, 없으면 빈 자리(회색 박스)
+const teamLogo = (t) => {
+  const f = path.join(D, "assets", "teams", t.no + ".svg");
+  const sr = `<span class="sr">${t.no}조</span>`;
+  if (!fs.existsSync(f)) return `<span class="lg ph" aria-hidden="true"></span>${sr}`;
+  const s = fs.readFileSync(f, "utf8").replace(/<?xml[^>]*>/, "").replace(/<!--[sS]*?-->/g, "").trim();
+  return `<span class="lg" aria-hidden="true">${s}</span>${sr}`;
+};
+
 // ---- home ----
 const home = `${head(data.site.title, data.site.intro.join(" "), "./")}
 <body data-root="./">
@@ -41,7 +50,7 @@ const home = `${head(data.site.title, data.site.intro.join(" "), "./")}
   <div class="dept rv" style="--i:2" role="img" aria-label="홍익대학교 디자인컨버전스학부">${DEPT}</div>
   <p class="intro rv" style="--i:3">${data.site.intro.map((l) => `<span>${esc(l)}</span>`).join("")}</p>
   <nav class="teams rv" style="--i:4" aria-label="조 선택">
-${T.map((t) => `    <a href="${t.no}/"><span class="no mono">${pad(t.no)}</span><span class="nm">${t.no}조</span><span class="tt">${esc(t.title)}</span></a>`).join("\n")}
+${T.map((t) => `    <a href="${t.no}/"><span class="no mono">${pad(t.no)}</span>${teamLogo(t)}<span class="tt">${esc(t.title)}</span></a>`).join("\n")}
   </nav>
 </main>
 ${foot("./")}`;
