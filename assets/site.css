@@ -99,6 +99,7 @@ svg, .mark img { display: block; width: 100%; height: auto; }
 .teams .no { color: var(--sub); transition: color .4s var(--ease); }
 .teams .lg { height: clamp(30px, 2.2vw, 42px); margin: 4px 0 2px; display: flex; align-items: center; justify-content: center; color: var(--ink); }
 .teams .lg svg { height: 100%; width: auto; max-width: clamp(120px, 8.5vw, 172px); }
+.lg svg { overflow: visible; }
 .teams .lg.ph { width: clamp(76px, 5.5vw, 106px); background: var(--film); }
 .teams .tt { font-size: 12px; color: var(--sub); opacity: 0; transform: translateY(-3px); transition: opacity .4s var(--ease), transform .4s var(--ease); }
 .teams a:hover .no, .teams a:focus-visible .no { color: var(--ink); }
