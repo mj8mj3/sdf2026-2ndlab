@@ -116,7 +116,7 @@ svg, .mark img { display: block; width: 100%; height: auto; }
 }
 .foot .keys { white-space: nowrap; }
 .home ~ .foot { justify-content: center; text-align: center; }
-.team ~ .foot { max-width: calc(1280px + var(--gutter) * 2); margin: 0 auto; }
+.team ~ .foot { max-width: calc(1280px + var(--gutter) * 2); margin: 0 auto; justify-content: flex-end; text-align: right; }
 
 /* ---------- team ---------- */
 .bar {
@@ -192,7 +192,7 @@ svg, .mark img { display: block; width: 100%; height: auto; }
   margin-top: clamp(64px, 14vh, 176px);
   border-top: 1px solid var(--line);
   padding-top: 22px;
-  display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
 }
 .switch .label { color: var(--sub); }
 .switch ol { list-style: none; display: flex; gap: 6px; }
@@ -234,11 +234,11 @@ svg, .mark img { display: block; width: 100%; height: auto; }
   .about .reel { order: 2; }
   .about .text dl { order: 3; margin-top: 0; }
   .foot { flex-direction: column; gap: 6px; }
+  .team ~ .foot { align-items: flex-end; }
   .foot .keys { display: none; }
   .bar .mark { width: 72px; }
   .bar .back span { display: none; }
-  .switch { flex-direction: column; align-items: flex-start; }
-  .switch ol { width: 100%; justify-content: space-between; }
+  .switch ol { gap: 10px; }
 }
 
 @media (hover: none) {
