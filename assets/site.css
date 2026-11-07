@@ -160,6 +160,7 @@ svg, .mark img { display: block; width: 100%; height: auto; }
   overflow: hidden;
 }
 .film video, .film iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #000; }
+.film video { object-fit: cover; }
 .film .play .ko { color: inherit; }
 .film .play {
   position: absolute; inset: 0; width: 100%;
