@@ -7,7 +7,7 @@
   --film: #F0EEE9;
   --accent: #C4B6A0;
   --ease: cubic-bezier(.2, .7, .1, 1);
-  --gutter: clamp(16px, 4vw, 48px);
+  --gutter: clamp(16px, 5vw, 96px);
   color-scheme: light;
 }
 
@@ -53,22 +53,23 @@ svg, .mark img { display: block; width: 100%; height: auto; }
 .home {
   flex: 1;
   width: 100%;
-  max-width: 1040px;
+  max-width: calc(1280px + var(--gutter) * 2);
   margin: 0 auto;
-  padding: clamp(72px, 16vh, 168px) var(--gutter) 64px;
+  padding: clamp(72px, 12vh, 168px) var(--gutter) clamp(64px, 10vh, 140px);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
 }
-.home .mark { width: clamp(200px, 30vw, 360px); view-transition-name: mark; }
-.home .dept { width: clamp(120px, 12vw, 156px); margin-top: clamp(40px, 7vh, 64px); }
-.home .intro { margin-top: clamp(36px, 6vh, 56px); color: var(--ink); opacity: .72; font-weight: 300; max-width: 30em; }
+.home .mark { width: clamp(200px, 24vw, 440px); view-transition-name: mark; }
+.home .dept { width: clamp(120px, 9vw, 176px); margin-top: clamp(40px, 8vh, 96px); }
+.home .intro { margin-top: clamp(36px, 6.5vh, 80px); font-size: clamp(15px, 0.9vw, 17px); color: var(--ink); opacity: .72; font-weight: 300; max-width: 30em; }
 .home .intro { text-wrap: balance; }
 .home .intro span { display: block; }
 
 .teams {
-  margin-top: clamp(56px, 10vh, 104px);
+  margin-top: clamp(56px, 11vh, 140px);
   width: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -77,18 +78,18 @@ svg, .mark img { display: block; width: 100%; height: auto; }
 }
 .teams a {
   position: relative;
-  padding: 26px 8px 24px;
+  padding: clamp(26px, 4vh, 48px) 8px clamp(24px, 3.6vh, 44px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: clamp(6px, 1vh, 12px);
   transition: color .4s var(--ease);
 }
 .teams a + a { border-left: 1px solid var(--line); }
 .teams .no { color: var(--sub); transition: color .4s var(--ease); }
-.teams .lg { height: 30px; margin: 4px 0 2px; display: flex; align-items: center; justify-content: center; color: var(--ink); }
-.teams .lg svg { height: 100%; width: auto; max-width: 150px; }
-.teams .lg.ph { width: 76px; background: var(--film); }
+.teams .lg { height: clamp(30px, 2.2vw, 42px); margin: 4px 0 2px; display: flex; align-items: center; justify-content: center; color: var(--ink); }
+.teams .lg svg { height: 100%; width: auto; max-width: clamp(150px, 11vw, 210px); }
+.teams .lg.ph { width: clamp(76px, 5.5vw, 106px); background: var(--film); }
 .teams .tt { font-size: 12px; color: var(--sub); opacity: 0; transform: translateY(-3px); transition: opacity .4s var(--ease), transform .4s var(--ease); }
 .teams a::after {
   content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: var(--accent);
@@ -109,6 +110,8 @@ svg, .mark img { display: block; width: 100%; height: auto; }
   color: var(--sub);
 }
 .foot .keys { white-space: nowrap; }
+.home ~ .foot { justify-content: center; text-align: center; }
+.team ~ .foot { max-width: calc(1280px + var(--gutter) * 2); margin: 0 auto; }
 
 /* ---------- team ---------- */
 .bar {
@@ -132,18 +135,18 @@ svg, .mark img { display: block; width: 100%; height: auto; }
 .team {
   flex: 1;
   width: 100%;
-  max-width: 1120px;
+  max-width: calc(1280px + var(--gutter) * 2);
   margin: 0 auto;
-  padding: clamp(40px, 9vh, 96px) var(--gutter) 48px;
+  padding: clamp(40px, 10vh, 128px) var(--gutter) clamp(48px, 8vh, 112px);
 }
-.team .head { display: grid; grid-template-columns: 1fr; gap: 10px; }
+.team .head { display: grid; grid-template-columns: 1fr; gap: clamp(10px, 1.4vh, 16px); }
 .team .head .mono { color: var(--sub); }
 .team h1 { font-size: clamp(40px, 6vw, 72px); font-weight: 300; line-height: 1.1; letter-spacing: -0.04em; }
 .team .head .title { font-size: 17px; font-weight: 400; }
 
 .film {
   position: relative;
-  margin-top: clamp(36px, 6vh, 64px);
+  margin-top: clamp(40px, 8vh, 104px);
   aspect-ratio: 16 / 9;
   background: var(--film);
   overflow: hidden;
@@ -162,23 +165,23 @@ svg, .mark img { display: block; width: 100%; height: auto; }
 .film figcaption { position: absolute; left: 16px; bottom: 14px; color: var(--sub); pointer-events: none; }
 
 .about {
-  margin-top: clamp(40px, 7vh, 72px);
+  margin-top: clamp(48px, 10vh, 128px);
   display: grid;
   grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
   align-items: start;
-  gap: clamp(32px, 6vw, 96px);
+  gap: clamp(32px, 7vw, 144px);
 }
 .film.reel { margin-top: 0; aspect-ratio: 9 / 16; }
-.about .text dl { margin-top: 40px; }
-.about .lead { font-size: 18px; line-height: 1.75; font-weight: 400; letter-spacing: -0.02em; }
-.about .body { margin-top: 20px; opacity: .72; font-weight: 300; }
+.about .text dl { margin-top: clamp(40px, 6vh, 72px); }
+.about .lead { font-size: clamp(18px, 1.15vw, 22px); line-height: 1.75; font-weight: 400; letter-spacing: -0.02em; }
+.about .body { margin-top: clamp(20px, 3vh, 32px); opacity: .72; font-weight: 300; }
 .about dl { display: grid; grid-template-columns: auto 1fr; column-gap: 24px; row-gap: 10px; align-content: start; border-top: 1px solid var(--line); padding-top: 18px; }
 .about dl { align-items: baseline; }
 .about dt { color: var(--sub); line-height: 24px; }
 .about dd { font-size: 14px; line-height: 24px; }
 
 .switch {
-  margin-top: clamp(64px, 12vh, 128px);
+  margin-top: clamp(64px, 14vh, 176px);
   border-top: 1px solid var(--line);
   padding-top: 22px;
   display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
@@ -195,7 +198,7 @@ svg, .mark img { display: block; width: 100%; height: auto; }
 .switch ol a:hover { border-color: var(--ink); }
 .switch ol a[aria-current="page"] { background: var(--accent); border-color: var(--accent); color: var(--ink); }
 
-.pn { margin-top: 28px; display: flex; justify-content: space-between; gap: 16px; }
+.pn { margin-top: clamp(28px, 4vh, 48px); display: flex; justify-content: space-between; gap: 16px; }
 .pn a { display: flex; flex-direction: column; gap: 4px; padding: 8px 0; }
 .pn a:last-child { text-align: right; align-items: flex-end; }
 .pn .ko { color: var(--sub); }
