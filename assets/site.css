@@ -184,6 +184,8 @@ svg, .mark img { display: block; width: 100%; height: auto; }
   gap: clamp(32px, 7vw, 144px);
 }
 .film.reel { margin-top: 0; aspect-ratio: 9 / 16; }
+/* 가로(16:9) 영상을 세로 박스에 넣을 때: 높이를 꽉 채우고 가운데만 보이게 자름 (16/9 ÷ 9/16 = 316%) */
+.film.reel iframe { width: 316.05%; left: -108.02%; }
 .about .tbox { min-height: clamp(180px, 22vh, 260px); background: #ECECEC; display: flex; align-items: center; justify-content: center; }.about .text dl { margin-top: clamp(40px, 6vh, 72px); }
 .about .lead { font-size: clamp(18px, 1.15vw, 22px); line-height: 1.75; font-weight: 400; letter-spacing: -0.02em; }
 .about .body { margin-top: clamp(20px, 3vh, 32px); opacity: .72; font-weight: 300; }
