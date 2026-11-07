@@ -97,10 +97,10 @@ svg, .mark img { display: block; width: 100%; height: auto; }
 /* 마우스를 올리면 칸 전체가 키컬러로 옅게 참 */
 .teams a:hover, .teams a:focus-visible { background-color: color-mix(in srgb, var(--accent) 22%, #FCFCFC); }
 .teams .no { color: var(--sub); transition: color .4s var(--ease); }
-.teams .lg { height: clamp(30px, 2.2vw, 42px); margin: 4px 0 2px; display: flex; align-items: center; justify-content: center; color: var(--ink); }
-.teams .lg svg { height: 100%; width: auto; max-width: clamp(120px, 8.5vw, 172px); }
+.teams .lg { height: calc(clamp(30px, 2.2vw, 42px) * 1.9); margin: 0; display: flex; align-items: center; justify-content: center; color: var(--ink); overflow: visible; }
+.teams .lg svg { height: calc(clamp(30px, 2.2vw, 42px) * var(--k, 1)); width: auto; flex-shrink: 0; }
 .lg svg { overflow: visible; }
-.teams .lg.ph { width: clamp(76px, 5.5vw, 106px); background: var(--film); }
+.teams .lg.ph { width: clamp(76px, 5.5vw, 106px); height: clamp(30px, 2.2vw, 42px); margin: calc(clamp(30px, 2.2vw, 42px) * 0.45) 0; background: var(--film); }
 .teams .tt { font-size: 12px; color: var(--sub); opacity: 0; transform: translateY(-3px); transition: opacity .4s var(--ease), transform .4s var(--ease); }
 .teams a:hover .no, .teams a:focus-visible .no { color: var(--ink); }
 .teams a:hover .tt, .teams a:focus-visible .tt { opacity: 1; transform: none; }
@@ -149,7 +149,7 @@ svg, .mark img { display: block; width: 100%; height: auto; }
 .team h1 { font-size: clamp(40px, 6vw, 72px); font-weight: 300; line-height: 1.1; letter-spacing: -0.04em; }
 .team .head .title { font-size: 17px; font-weight: 400; }
 .team .tlogo { margin: clamp(6px, 1vh, 12px) 0 0; font-size: 0; line-height: 0; }
-.team .tlogo .lg { display: block; height: clamp(28px, 2.8vw, 44px); color: var(--ink); }
+.team .tlogo .lg { display: block; height: calc(clamp(28px, 2.8vw, 44px) * var(--k, 1)); color: var(--ink); }
 .team .tlogo .lg svg { width: auto; height: 100%; max-width: 100%; }
 .team .tlogo .lg.ph { width: clamp(90px, 9vw, 130px); background: var(--film); }
 
@@ -232,8 +232,8 @@ svg, .mark img { display: block; width: 100%; height: auto; }
   /* 칸 높이는 모든 조가 같게(24px), 세로형 로고만 그림을 키워 위아래 여백 안으로 넘치게 함 */
   .teams .lg { height: 24px; margin: 0 auto 0 0; justify-content: flex-start; overflow: visible; }
   .team .tlogo .lg { height: calc(28px * var(--k, 1)); }
-  .teams .lg.ph { width: 64px; }
-  .teams .lg svg { max-width: 120px; height: calc(24px * var(--k, 1)); flex-shrink: 0; }
+  .teams .lg.ph { width: 64px; height: 24px; margin: 0 auto 0 0; }
+  .teams .lg svg { height: calc(24px * var(--k, 1)); flex-shrink: 0; }
   .teams .no { order: -1; width: 28px; }
   .teams .tt { opacity: 1; transform: none; }
   .about { grid-template-columns: 1fr; }

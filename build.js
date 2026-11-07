@@ -39,10 +39,10 @@ const teamLogo = (t) => {
   const sr = `<span class="sr">${t.no}조</span>`;
   if (!fs.existsSync(f)) return `<span class="lg ph" aria-hidden="true"></span>${sr}`;
   const s = fs.readFileSync(f, "utf8").replace(/<\?xml[^>]*>/, "").replace(/<!--[\s\S]*?-->/g, "").trim();
-  // 세로로 긴 로고는 같은 높이면 작아 보여서, 가로세로 비율에 맞춰 키움(--k, 1~1.8배)
+  // 시각적 면적 통일: 비율 4:1 로고를 기준으로, 넓은 로고는 줄이고 좁은 로고는 키움(--k = √(4/비율), 0.7~1.9배)
   const vb = (s.match(/viewBox="([^"]+)"/) || [])[1];
   const [, , w, h] = vb ? vb.split(/[\s,]+/).map(Number) : [0, 0, 4, 1];
-  const k = Math.min(1.8, Math.max(1, Math.pow(4 / (w / h), 0.4))).toFixed(2);
+  const k = Math.min(1.9, Math.max(0.7, Math.sqrt(4 / (w / h)))).toFixed(2);
   return `<span class="lg" style="--k:${k}" aria-hidden="true">${s}</span>${sr}`;
 };
 
