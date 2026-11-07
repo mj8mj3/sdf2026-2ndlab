@@ -67,7 +67,7 @@ svg, .mark img { display: block; width: 100%; height: auto; }
 .top { height: 74px; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .top .mark { height: 20px; view-transition-name: mark; }
 .top .mark img { width: auto; height: 100%; }
-.top .dept { height: 16px; color: var(--ink); }
+.top .dept { height: 8px; color: var(--ink); }
 .top .dept svg { width: auto; height: 100%; }
 .home .intro { margin-top: 0; font-size: clamp(15px, 0.9vw, 17px); color: var(--ink); opacity: .72; font-weight: 300; max-width: 48em; }
 .home .intro { text-wrap: balance; }
@@ -216,7 +216,7 @@ svg, .mark img { display: block; width: 100%; height: auto; }
   .home .intro { font-size: 14px; }
   .top { height: 56px; padding: 0 16px; }
   .top .mark { height: 17px; }
-  .top .dept { height: 11px; }
+  .top .dept { height: 8px; }
   .teams { grid-template-columns: 1fr; border-bottom: 0; }
   .teams a { flex-direction: row; justify-content: space-between; padding: 18px 2px; border-bottom: 1px solid var(--line); text-align: left; gap: 16px; }
   .teams a + a { border-left: 0; }
