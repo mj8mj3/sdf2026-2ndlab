@@ -50,7 +50,7 @@ const home = `${head(data.site.title, data.site.intro.join(" "), "./")}
   <div class="dept rv" style="--i:2" role="img" aria-label="홍익대학교 디자인컨버전스학부">${DEPT}</div>
   <p class="intro rv" style="--i:3">${data.site.intro.map((l) => `<span>${esc(l)}</span>`).join("")}</p>
   <nav class="teams rv" style="--i:4" aria-label="조 선택">
-${T.map((t) => `    <a href="${t.no}/"><span class="no mono">${pad(t.no)}</span>${teamLogo(t)}<span class="tt">${esc(t.title)}</span></a>`).join("\n")}
+${T.map((t) => `    <a href="${t.no}/"><span class="no mono">${pad(t.no)}</span>${teamLogo(t)}${t.title ? `<span class="tt">${esc(t.title)}</span>` : ""}</a>`).join("\n")}
   </nav>
 </main>
 ${foot("./")}`;
@@ -60,7 +60,7 @@ fs.writeFileSync(path.join(D, "index.html"), home);
 for (const t of T) {
   const r = "../";
   const members = Object.entries(t.members || {}).map(([k, v]) => `<dt class="ko">${esc(k)}</dt><dd>${esc(v)}</dd>`).join("");
-  const page = `${head(`${t.no}조 · ${t.title} — 2nd LAB`, t.summary || data.site.intro.join(" "), r)}
+  const page = `${head(`${t.no}조${t.title ? ` · ${t.title}` : ""} — 2nd LAB`, t.summary || data.site.intro.join(" "), r)}
 <body data-root="${r}" data-team="${t.no}">
 <header class="bar">
   <a class="back ko" href="${r}" aria-label="처음으로 돌아가기"><svg viewBox="0 0 28 14" aria-hidden="true"><path d="M27 7H1.5M7.5 1L1.5 7l6 6"/></svg></a>
@@ -71,8 +71,8 @@ for (const t of T) {
   <div class="head">
     <p class="mono rv" style="--i:0">Team ${pad(t.no)}</p>
     <h1 class="tlogo rv" style="--i:1">${teamLogo(t)}</h1>
-    <p class="title rv" style="--i:2">${esc(t.title)}</p>
-  </div>
+${t.title ? `    <p class="title rv" style="--i:2">${esc(t.title)}</p>
+` : ""}  </div>
   <figure class="film rv" style="--i:3" data-video="${esc(t.video || "")}" aria-label="${t.no}조 영상">
     <button class="play" type="button" disabled><span class="tri"></span><span class="lbl ko">메인 영상</span></button>
   </figure>

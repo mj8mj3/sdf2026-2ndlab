@@ -11,7 +11,7 @@
   "teams": [
     {
       "no": 1,
-      "title": "프로젝트 제목 하나",
+      "title": "",
       "summary": "",
       "body": "",
       "members": {
@@ -24,7 +24,7 @@
     },
     {
       "no": 2,
-      "title": "프로젝트 제목 둘",
+      "title": "",
       "summary": "",
       "body": "",
       "members": {
@@ -37,7 +37,7 @@
     },
     {
       "no": 3,
-      "title": "프로젝트 제목 셋",
+      "title": "",
       "summary": "",
       "body": "",
       "members": {
@@ -50,7 +50,7 @@
     },
     {
       "no": 4,
-      "title": "프로젝트 제목 넷",
+      "title": "",
       "summary": "",
       "body": "",
       "members": {
@@ -63,7 +63,7 @@
     },
     {
       "no": 5,
-      "title": "프로젝트 제목 다섯",
+      "title": "",
       "summary": "",
       "body": "",
       "members": {
