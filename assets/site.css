@@ -169,6 +169,10 @@ svg, .mark img { display: block; width: 100%; height: auto; }
 .film .play .tri { width: 0; height: 0; border-left: 14px solid currentColor; border-top: 9px solid transparent; border-bottom: 9px solid transparent; transition: transform .5s var(--ease); }
 .film .play:hover .tri { transform: scale(1.18); }
 .film .play[disabled] { cursor: default; color: var(--sub); }
+/* 썸네일이 있는 영상: 사진을 꽉 채우고 재생 표시는 흰색 */
+.film.has-poster { background-size: cover; background-position: center; }
+.film.has-poster .play { color: #fff; text-shadow: 0 1px 8px rgba(0,0,0,.35); }
+.film.has-poster .play .tri { filter: drop-shadow(0 1px 6px rgba(0,0,0,.35)); }
 .film .play[disabled] .tri { border-left-color: transparent; width: 22px; height: 1px; border: 0; background: currentColor; }
 .film figcaption { position: absolute; left: 16px; bottom: 14px; color: var(--sub); pointer-events: none; }
 

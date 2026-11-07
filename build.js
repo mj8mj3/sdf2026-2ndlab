@@ -79,7 +79,7 @@ for (const t of T) {
     <h1 class="tlogo rv" style="--i:1">${teamLogo(t)}</h1>
 ${t.title ? `    <p class="title rv" style="--i:2">${esc(t.title)}</p>
 ` : ""}  </div>
-  <figure class="film rv" style="--i:3" data-video="${esc(t.video || "")}" aria-label="${t.no}조 영상">
+  <figure class="film rv${t.poster ? " has-poster" : ""}" style="--i:3${t.poster ? `;background-image:url(${r}${esc(t.poster)})` : ""}" data-video="${esc(t.video || "")}" aria-label="${t.no}조 영상">
     <button class="play" type="button" disabled><span class="tri"></span><span class="lbl ko">메인 영상</span></button>
   </figure>
   <section class="about rv" style="--i:4">
