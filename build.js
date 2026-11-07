@@ -60,7 +60,7 @@ fs.writeFileSync(path.join(D, "index.html"), home);
 for (const t of T) {
   const r = "../";
   const members = Object.entries(t.members || {}).map(([k, v]) => `<dt class="ko">${esc(k)}</dt><dd>${esc(v)}</dd>`).join("");
-  const page = `${head(`${t.no}조 · ${t.title} — 2nd LAB`, t.summary, r)}
+  const page = `${head(`${t.no}조 · ${t.title} — 2nd LAB`, t.summary || data.site.intro.join(" "), r)}
 <body data-root="${r}" data-team="${t.no}">
 <header class="bar">
   <a class="back ko" href="${r}" aria-label="처음으로 돌아가기"><svg viewBox="0 0 28 14" aria-hidden="true"><path d="M27 7H1.5M7.5 1L1.5 7l6 6"/></svg></a>
@@ -80,7 +80,7 @@ for (const t of T) {
     <figure class="film reel" data-video="${esc(t.brandFilm || "")}" aria-label="${t.no}조 브랜드 필름">
       <button class="play" type="button" disabled><span class="tri"></span><span class="lbl ko">브랜드 필름</span></button>
     </figure>
-    <div class="text"><p class="lead">${esc(t.summary)}</p><p class="body">${esc(t.body)}</p><dl>${members}</dl></div>
+    <div class="text">${t.summary || t.body ? `${t.summary ? `<p class="lead">${esc(t.summary)}</p>` : ""}${t.body ? `<p class="body">${esc(t.body)}</p>` : ""}` : `<div class="tbox"><span class="ko">프로젝트 소개 텍스트</span></div>`}<dl>${members}</dl></div>
   </section>
   <nav class="switch rv" style="--i:5" aria-label="다른 프로젝트 보기">
     <span class="label ko">다른 프로젝트 보기</span>
