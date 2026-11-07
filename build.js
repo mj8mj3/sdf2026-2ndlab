@@ -47,7 +47,8 @@ const teamLogo = (t) => {
   // 시각적 면적 통일: 비율 4:1 로고를 기준으로, 넓은 로고는 줄이고 좁은 로고는 키움(--k = √(4/비율), 0.7~1.9배)
   const vb = (s.match(/viewBox="([^"]+)"/) || [])[1];
   const [, , w, h] = vb ? vb.split(/[\s,]+/).map(Number) : [0, 0, 4, 1];
-  const k = Math.min(1.9, Math.max(0.7, Math.sqrt(4 / (w / h)))).toFixed(2);
+  // 굵기 차이 보정: teams.json 의 logoScale (기본 1)
+  const k = (Math.min(1.9, Math.max(0.7, Math.sqrt(4 / (w / h)))) * (t.logoScale || 1)).toFixed(2);
   return `<span class="lg" style="--k:${k}" aria-hidden="true">${s}</span>${sr}`;
 };
 
