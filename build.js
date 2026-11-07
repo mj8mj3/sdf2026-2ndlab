@@ -73,7 +73,7 @@ for (const t of T) {
 </header>
 <main class="team">
   <div class="head">
-    <p class="mono rv" style="--i:0">Team ${pad(t.no)}</p>
+    <p class="mono rv" style="--i:0">${pad(t.no)}</p>
     <h1 class="tlogo rv" style="--i:1">${teamLogo(t)}</h1>
 ${t.title ? `    <p class="title rv" style="--i:2">${esc(t.title)}</p>
 ` : ""}  </div>
