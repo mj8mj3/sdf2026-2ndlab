@@ -70,7 +70,7 @@ for (const t of T) {
 <main class="team">
   <div class="head">
     <p class="mono rv" style="--i:0">Team ${pad(t.no)}</p>
-    <h1 class="rv" style="--i:1">${t.no}조</h1>
+    <h1 class="tlogo rv" style="--i:1">${teamLogo(t)}</h1>
     <p class="title rv" style="--i:2">${esc(t.title)}</p>
   </div>
   <figure class="film rv" style="--i:3" data-video="${esc(t.video || "")}" aria-label="${t.no}조 영상">

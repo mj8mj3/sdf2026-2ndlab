@@ -142,6 +142,10 @@ svg, .mark img { display: block; width: 100%; height: auto; }
 .team .head .mono { color: var(--sub); }
 .team h1 { font-size: clamp(40px, 6vw, 72px); font-weight: 300; line-height: 1.1; letter-spacing: -0.04em; }
 .team .head .title { font-size: 17px; font-weight: 400; }
+.team .tlogo { margin: clamp(10px, 1.6vh, 18px) 0 clamp(6px, 1vh, 12px); }
+.team .tlogo .lg { display: block; height: clamp(48px, 6vw, 88px); color: var(--ink); }
+.team .tlogo .lg svg { width: auto; height: 100%; max-width: 100%; }
+.team .tlogo .lg.ph { width: clamp(150px, 16vw, 230px); background: var(--film); }
 
 .film {
   position: relative;
