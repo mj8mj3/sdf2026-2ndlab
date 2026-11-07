@@ -20,6 +20,11 @@ const head = (title, desc, root) => `<!doctype html>
 <meta name="theme-color" content="#FCFCFC">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
+<meta property="og:image" content="https://2ndlab.kr/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="${root}assets/favicon.svg?v=4" type="image/svg+xml">
 <link rel="stylesheet" href="${root}assets/fonts/fonts.css">
 <link rel="stylesheet" href="${root}assets/site.css">
