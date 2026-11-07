@@ -64,7 +64,7 @@ svg, .mark img { display: block; width: 100%; height: auto; }
 }
 .home .mark { width: clamp(200px, 24vw, 440px); view-transition-name: mark; }
 .home .dept { width: clamp(120px, 9vw, 176px); margin-top: clamp(40px, 8vh, 96px); }
-.home .intro { margin-top: clamp(36px, 6.5vh, 80px); font-size: clamp(15px, 0.9vw, 17px); color: var(--ink); opacity: .72; font-weight: 300; max-width: 30em; }
+.home .intro { margin-top: clamp(36px, 6.5vh, 80px); font-size: clamp(15px, 0.9vw, 17px); color: var(--ink); opacity: .72; font-weight: 300; max-width: 48em; }
 .home .intro { text-wrap: balance; }
 .home .intro span { display: block; }
 
