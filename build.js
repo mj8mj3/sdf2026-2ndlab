@@ -20,7 +20,7 @@ const head = (title, desc, root) => `<!doctype html>
 <meta name="theme-color" content="#FCFCFC">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
-<link rel="icon" href="${root}assets/favicon.svg?v=2" type="image/svg+xml">
+<link rel="icon" href="${root}assets/favicon.svg?v=3" type="image/svg+xml">
 <link rel="stylesheet" href="${root}assets/fonts/fonts.css">
 <link rel="stylesheet" href="${root}assets/site.css">
 </head>`;
@@ -74,16 +74,16 @@ for (const t of T) {
     <p class="title rv" style="--i:2">${esc(t.title)}</p>
   </div>
   <figure class="film rv" style="--i:3" data-video="${esc(t.video || "")}" aria-label="${t.no}조 영상">
-    <button class="play" type="button" disabled><span class="tri"></span><span class="lbl ko">영상 준비 중</span></button>
+    <button class="play" type="button" disabled><span class="tri"></span><span class="lbl ko">메인 영상</span></button>
   </figure>
   <section class="about rv" style="--i:4">
     <figure class="film reel" data-video="${esc(t.brandFilm || "")}" aria-label="${t.no}조 브랜드 필름">
-      <button class="play" type="button" disabled><span class="tri"></span><span class="lbl ko">브랜드 필름 준비 중</span></button>
+      <button class="play" type="button" disabled><span class="tri"></span><span class="lbl ko">브랜드 필름</span></button>
     </figure>
     <div class="text"><p class="lead">${esc(t.summary)}</p><p class="body">${esc(t.body)}</p><dl>${members}</dl></div>
   </section>
-  <nav class="switch rv" style="--i:5" aria-label="다른 조 보기">
-    <span class="label ko">다른 조 보기</span>
+  <nav class="switch rv" style="--i:5" aria-label="다른 프로젝트 보기">
+    <span class="label ko">다른 프로젝트 보기</span>
     <ol>${T.map((o) => `<li><a href="${r}${o.no}/"${o.no === t.no ? ' aria-current="page"' : ""} aria-label="${o.no}조">${pad(o.no)}</a></li>`).join("")}</ol>
   </nav>
 </main>
