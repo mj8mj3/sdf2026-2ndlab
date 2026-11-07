@@ -198,12 +198,6 @@ svg, .mark img { display: block; width: 100%; height: auto; }
 .switch ol a:hover { border-color: var(--ink); }
 .switch ol a[aria-current="page"] { background: var(--accent); border-color: var(--accent); color: var(--ink); }
 
-.pn { margin-top: clamp(28px, 4vh, 48px); display: flex; justify-content: space-between; gap: 16px; }
-.pn a { display: flex; flex-direction: column; gap: 4px; padding: 8px 0; }
-.pn a:last-child { text-align: right; align-items: flex-end; }
-.pn .ko { color: var(--sub); }
-.pn .nm { font-size: 15px; }
-.pn a:hover .nm { text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; }
 
 .foot .dept-s { width: 34px; color: var(--ink); }
 

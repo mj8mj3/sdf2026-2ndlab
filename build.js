@@ -58,9 +58,6 @@ fs.writeFileSync(path.join(D, "index.html"), home);
 
 // ---- team pages ----
 for (const t of T) {
-  const i = T.indexOf(t);
-  const prev = T[(i + T.length - 1) % T.length];
-  const next = T[(i + 1) % T.length];
   const r = "../";
   const members = Object.entries(t.members || {}).map(([k, v]) => `<dt class="ko">${esc(k)}</dt><dd>${esc(v)}</dd>`).join("");
   const page = `${head(`${t.no}조 · ${t.title} — 2nd LAB`, t.summary, r)}
@@ -88,10 +85,6 @@ for (const t of T) {
   <nav class="switch rv" style="--i:5" aria-label="다른 조 보기">
     <span class="label ko">다른 조 보기</span>
     <ol>${T.map((o) => `<li><a href="${r}${o.no}/"${o.no === t.no ? ' aria-current="page"' : ""} aria-label="${o.no}조">${pad(o.no)}</a></li>`).join("")}</ol>
-  </nav>
-  <nav class="pn rv" style="--i:6" aria-label="이전·다음 조">
-    <a href="${r}${prev.no}/" rel="prev"><span class="ko">← 이전</span><span class="nm">${prev.no}조 · ${esc(prev.title)}</span></a>
-    <a href="${r}${next.no}/" rel="next"><span class="ko">다음 →</span><span class="nm">${next.no}조 · ${esc(next.title)}</span></a>
   </nav>
 </main>
 ${foot(r)}`;
