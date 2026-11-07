@@ -220,10 +220,11 @@ svg, .mark img { display: block; width: 100%; height: auto; }
   .teams { grid-template-columns: 1fr; border-bottom: 0; }
   .teams a { flex-direction: row; justify-content: space-between; padding: 18px 2px; border-bottom: 1px solid var(--line); text-align: left; gap: 16px; }
   .teams a + a { border-left: 0; }
-  .teams .lg { height: calc(24px * var(--k, 1)); margin: 0 auto 0 0; justify-content: flex-start; }
+  /* 칸 높이는 모든 조가 같게(24px), 세로형 로고만 그림을 키워 위아래 여백 안으로 넘치게 함 */
+  .teams .lg { height: 24px; margin: 0 auto 0 0; justify-content: flex-start; overflow: visible; }
   .team .tlogo .lg { height: calc(28px * var(--k, 1)); }
   .teams .lg.ph { width: 64px; }
-  .teams .lg svg { max-width: 120px; }
+  .teams .lg svg { max-width: 120px; height: calc(24px * var(--k, 1)); flex-shrink: 0; }
   .teams .no { order: -1; width: 28px; }
   .teams .tt { opacity: 1; transform: none; }
   .about { grid-template-columns: 1fr; }
