@@ -5,7 +5,7 @@ const D = __dirname;
 const data = JSON.parse(fs.readFileSync(path.join(D, "teams.json"), "utf8"));
 const svg = (f) => fs.readFileSync(path.join(D, "assets", f), "utf8").trim();
 const LOGO = (root) => `<img src="${root}assets/logo-2ndlab.png" alt="" width="948" height="239" decoding="async">`;
-const DEPT = svg("logo-hongik-dc-alt.svg");
+const DEPT = svg("logo-dc-h.svg"); // 가로형 디자인컨버전스 로고(아이콘 + 글자)
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const pad = (n) => String(n).padStart(2, "0");
 const T = data.teams;
@@ -49,9 +49,11 @@ const teamLogo = (t) => {
 // ---- home ----
 const home = `${head(data.site.title, data.site.intro.join(" "), "./")}
 <body data-root="./">
+<header class="top rv" style="--i:0">
+  <h1 class="mark" aria-label="2nd LAB">${LOGO("./")}</h1>
+  <div class="dept" role="img" aria-label="홍익대학교 디자인컨버전스학부">${DEPT}</div>
+</header>
 <main class="home">
-  <h1 class="mark rv" style="--i:0" aria-label="2nd LAB">${LOGO("./")}</h1>
-  <div class="dept rv" style="--i:2" role="img" aria-label="홍익대학교 디자인컨버전스학부">${DEPT}</div>
   <p class="intro rv" style="--i:3">${data.site.intro.map((l) => `<span>${esc(l)}</span>`).join("")}</p>
   <nav class="teams rv" style="--i:4" aria-label="조 선택">
 ${T.map((t) => `    <a href="${t.no}/"><span class="no mono">${pad(t.no)}</span>${teamLogo(t)}${t.title ? `<span class="tt">${esc(t.title)}</span>` : ""}</a>`).join("\n")}

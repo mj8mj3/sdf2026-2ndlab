@@ -55,7 +55,7 @@ svg, .mark img { display: block; width: 100%; height: auto; }
   width: 100%;
   max-width: calc(1280px + var(--gutter) * 2);
   margin: 0 auto;
-  padding: clamp(72px, 12vh, 168px) var(--gutter) clamp(64px, 10vh, 140px);
+  padding: clamp(40px, 8vh, 120px) var(--gutter) clamp(64px, 10vh, 140px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,10 +63,13 @@ svg, .mark img { display: block; width: 100%; height: auto; }
   text-align: center;
   position: relative;
 }
-/* 2nd LAB 로고: 작게, 왼쪽 위(본문 왼쪽 끝선에 맞춤) */
-.home .mark { position: absolute; top: clamp(24px, 4.5vh, 48px); left: var(--gutter); width: clamp(110px, 9vw, 160px); view-transition-name: mark; }
-.home .dept { width: clamp(120px, 9vw, 176px); margin-top: clamp(40px, 8vh, 96px); }
-.home .intro { margin-top: clamp(36px, 6.5vh, 80px); font-size: clamp(15px, 0.9vw, 17px); color: var(--ink); opacity: .72; font-weight: 300; max-width: 48em; }
+/* 메인 상단 줄: 왼쪽 2nd LAB, 오른쪽 디자인컨버전스 (designlabcrete.com 상단 배치 기준: 높이 74, 양끝 20, 로고 높이 20) */
+.top { height: 74px; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.top .mark { height: 20px; view-transition-name: mark; }
+.top .mark img { width: auto; height: 100%; }
+.top .dept { height: 16px; color: var(--ink); }
+.top .dept svg { width: auto; height: 100%; }
+.home .intro { margin-top: 0; font-size: clamp(15px, 0.9vw, 17px); color: var(--ink); opacity: .72; font-weight: 300; max-width: 48em; }
 .home .intro { text-wrap: balance; }
 .home .intro span { display: block; }
 
@@ -211,6 +214,9 @@ svg, .mark img { display: block; width: 100%; height: auto; }
   .home .intro span { display: inline; }
   .home .intro span + span::before { content: " "; }
   .home .intro { font-size: 14px; }
+  .top { height: 56px; padding: 0 16px; }
+  .top .mark { height: 17px; }
+  .top .dept { height: 11px; }
   .teams { grid-template-columns: 1fr; border-bottom: 0; }
   .teams a { flex-direction: row; justify-content: space-between; padding: 18px 2px; border-bottom: 1px solid var(--line); text-align: left; gap: 16px; }
   .teams a + a { border-left: 0; }
