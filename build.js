@@ -63,7 +63,7 @@ for (const t of T) {
   const page = `${head(`${t.no}조 · ${t.title} — 2nd LAB`, t.summary, r)}
 <body data-root="${r}" data-team="${t.no}">
 <header class="bar">
-  <a class="back ko" href="${r}" aria-label="처음으로 돌아가기"><i></i><span>처음으로</span></a>
+  <a class="back ko" href="${r}" aria-label="처음으로 돌아가기"><svg viewBox="0 0 28 14" aria-hidden="true"><path d="M27 7H1.5M7.5 1L1.5 7l6 6"/></svg></a>
   <a class="mark" href="${r}" aria-label="2nd LAB 처음으로">${LOGO(r)}</a>
   <span class="count mono"><b>${pad(t.no)}</b> / ${pad(T.length)}</span>
 </header>
