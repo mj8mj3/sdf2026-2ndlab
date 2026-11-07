@@ -20,7 +20,7 @@ const head = (title, desc, root) => `<!doctype html>
 <meta name="theme-color" content="#FCFCFC">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
-<link rel="icon" href="${root}assets/favicon.svg?v=3" type="image/svg+xml">
+<link rel="icon" href="${root}assets/favicon.svg?v=4" type="image/svg+xml">
 <link rel="stylesheet" href="${root}assets/fonts/fonts.css">
 <link rel="stylesheet" href="${root}assets/site.css">
 </head>`;
