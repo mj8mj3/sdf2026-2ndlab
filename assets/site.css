@@ -83,19 +83,16 @@ svg, .mark img { display: block; width: 100%; height: auto; }
   flex-direction: column;
   align-items: center;
   gap: clamp(6px, 1vh, 12px);
-  transition: color .4s var(--ease);
+  transition: color .4s var(--ease), background-color .45s var(--ease);
 }
 .teams a + a { border-left: 1px solid var(--line); }
+/* 마우스를 올리면 칸 전체가 키컬러로 옅게 참. --bg도 같이 바꿔 로고의 흰 부분이 배경과 맞도록 함 */
+.teams a:hover, .teams a:focus-visible { --bg: color-mix(in srgb, var(--accent) 22%, #FCFCFC); background-color: var(--bg); }
 .teams .no { color: var(--sub); transition: color .4s var(--ease); }
 .teams .lg { height: clamp(30px, 2.2vw, 42px); margin: 4px 0 2px; display: flex; align-items: center; justify-content: center; color: var(--ink); }
 .teams .lg svg { height: 100%; width: auto; max-width: clamp(120px, 8.5vw, 172px); }
 .teams .lg.ph { width: clamp(76px, 5.5vw, 106px); background: var(--film); }
 .teams .tt { font-size: 12px; color: var(--sub); opacity: 0; transform: translateY(-3px); transition: opacity .4s var(--ease), transform .4s var(--ease); }
-.teams a::after {
-  content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: var(--accent);
-  transform: scaleX(0); transform-origin: left; transition: transform .5s var(--ease);
-}
-.teams a:hover::after, .teams a:focus-visible::after { transform: scaleX(1); }
 .teams a:hover .no, .teams a:focus-visible .no { color: var(--ink); }
 .teams a:hover .tt, .teams a:focus-visible .tt { opacity: 1; transform: none; }
 .teams a:focus-visible { outline-offset: -1px; }
@@ -218,7 +215,6 @@ svg, .mark img { display: block; width: 100%; height: auto; }
   .teams .lg svg { max-width: 120px; }
   .teams .no { order: -1; width: 28px; }
   .teams .tt { opacity: 1; transform: none; }
-  .teams a::after { bottom: -1px; }
   .about { grid-template-columns: 1fr; }
   .about .reel { order: 2; }
   .foot { flex-direction: column; gap: 6px; }
