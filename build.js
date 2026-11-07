@@ -83,7 +83,7 @@ ${t.title ? `    <p class="title rv" style="--i:2">${esc(t.title)}</p>
     <button class="play" type="button" disabled><span class="tri"></span><span class="lbl ko">메인 영상</span></button>
   </figure>
   <section class="about rv" style="--i:4">
-    <figure class="film reel" data-video="${esc(t.brandFilm || "")}" aria-label="${t.no}조 브랜드 필름">
+    <figure class="film reel${t.brandPoster ? " has-poster" : ""}"${t.brandPoster ? ` style="background-image:url(${r}${esc(t.brandPoster)})"` : ""} data-video="${esc(t.brandFilm || "")}" aria-label="${t.no}조 브랜드 필름">
       <button class="play" type="button" disabled><span class="tri"></span><span class="lbl ko">브랜드 필름</span></button>
     </figure>
     <div class="text">${t.summary || t.body ? `${t.summary ? `<p class="lead">${esc(t.summary)}</p>` : ""}${t.body ? `<p class="body">${esc(t.body)}</p>` : ""}` : `<div class="tbox"><span class="ko">프로젝트 소개 텍스트</span></div>`}<dl>${members}</dl></div>

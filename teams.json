@@ -21,7 +21,8 @@
       },
       "video": "https://www.youtube.com/watch?v=jaBAGZCVVfU",
       "brandFilm": "",
-      "poster": "assets/thumbs/1-main.jpg"
+      "poster": "assets/thumbs/1-main.jpg",
+      "brandPoster": "assets/thumbs/1-brand.jpg"
     },
     {
       "no": 2,
