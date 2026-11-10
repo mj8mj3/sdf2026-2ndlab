@@ -51,3 +51,34 @@
   }, { once: true });
   });
 })();
+
+// 폰: 메인 소개글 마지막 줄 오른쪽 빈 공간만큼 글상자를 좁혀 좌우 여백을 같게 늘림(줄 수는 그대로)
+(() => {
+  const p = document.querySelector(".home .intro");
+  if (!p) return;
+  const mq = matchMedia("(max-width: 720px)");
+  const lines = () => {
+    const r = document.createRange();
+    r.selectNodeContents(p);
+    return new Set([...r.getClientRects()].map((x) => Math.round(x.top))).size;
+  };
+  const fit = () => {
+    p.style.width = "";
+    p.style.marginInline = "";
+    if (!mq.matches) return;
+    const full = p.getBoundingClientRect().width;
+    const n = lines();
+    let lo = full * 0.6, hi = full;
+    for (let i = 0; i < 14; i++) {
+      const mid = (lo + hi) / 2;
+      p.style.width = mid + "px";
+      if (lines() > n) lo = mid; else hi = mid;
+    }
+    p.style.width = Math.ceil(hi) + "px";
+    p.style.marginInline = "auto";
+  };
+  let t;
+  const run = () => { clearTimeout(t); t = setTimeout(fit, 60); };
+  (document.fonts ? document.fonts.ready : Promise.resolve()).then(fit);
+  addEventListener("resize", run);
+})();
