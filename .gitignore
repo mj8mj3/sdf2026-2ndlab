@@ -1,3 +1,4 @@
 *.ai
 ~ai-*.tmp
 *.fig
+.claude/
