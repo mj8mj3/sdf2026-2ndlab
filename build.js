@@ -27,7 +27,7 @@ const head = (title, desc, root) => `<!doctype html>
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="${root}assets/favicon.svg?v=4" type="image/svg+xml">
 <link rel="stylesheet" href="${root}assets/fonts/fonts.css">
-<link rel="stylesheet" href="${root}assets/site.css?v=20261111">
+<link rel="stylesheet" href="${root}assets/site.css?v=20261111c">
 </head>`;
 
 const foot = (root) => `<footer class="foot mono rv" style="--i:9">
@@ -71,7 +71,8 @@ fs.writeFileSync(path.join(D, "index.html"), home);
 // ---- team pages ----
 for (const t of T) {
   const r = "../";
-  const members = Object.entries(t.members || {}).map(([k, v]) => `<dt class="ko">${esc(k)}</dt><dd>${esc(v)}</dd>`).join("");
+  const ORDER = ["PI", "BI", "MI"];
+  const members = Object.entries(t.members || {}).sort((a, b) => (ORDER.indexOf(a[0]) + 1 || 99) - (ORDER.indexOf(b[0]) + 1 || 99)).map(([k, v]) => `<dt class="ko">${esc(k)}</dt><dd>${esc(v)}</dd>`).join("");
   const page = `${head(`${t.no}조${t.title ? ` · ${t.title}` : ""} — 2nd LAB`, t.summary || data.site.intro.join(" "), r)}
 <body data-root="${r}" data-team="${t.no}">
 <header class="bar">
