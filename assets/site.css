@@ -236,7 +236,7 @@ svg, .mark img { display: block; width: 100%; height: auto; }
   .teams .lg svg { height: calc(24px * var(--k, 1)); flex-shrink: 0; }
   .teams .no { order: -1; width: 28px; }
   .teams .tt { opacity: 1; transform: none; }
-  .about { grid-template-columns: 1fr; }
+  .about { grid-template-columns: 1fr; margin-top: clamp(24px, 3vw, 56px); }
   /* 폰: 소개 → 브랜드 필름 → 멤버 순서 */
   .about .text { display: contents; }
   .about .lead, .about .body, .about .tbox { order: 1; }
