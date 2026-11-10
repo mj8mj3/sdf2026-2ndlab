@@ -222,7 +222,8 @@ svg, .mark img { display: block; width: 100%; height: auto; }
 @media (max-width: 720px) {
   .home .intro span { display: inline; }
   .home .intro span + span::before { content: " "; }
-  .home .intro { font-size: 14px; text-align: justify; text-wrap: wrap; word-break: break-all; }
+  .home .intro { font-size: 14px; text-align: justify; text-wrap: wrap; word-break: break-all; margin-top: max(48px, calc(40svh - 171px)); }
+  .home .teams { margin-top: 140px; }
   .top { height: 56px; padding: 0 16px; }
   .top .mark { height: 18px; }
   .top .dept { height: 8px; }
