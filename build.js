@@ -27,7 +27,7 @@ const head = (title, desc, root) => `<!doctype html>
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="${root}assets/favicon.svg?v=4" type="image/svg+xml">
 <link rel="stylesheet" href="${root}assets/fonts/fonts.css">
-<link rel="stylesheet" href="${root}assets/site.css?v=20261111g">
+<link rel="stylesheet" href="${root}assets/site.css?v=20261111h">
 </head>`;
 
 const foot = (root) => `<footer class="foot mono rv" style="--i:9">
