@@ -182,13 +182,22 @@ svg, .mark img { display: block; width: 100%; height: auto; }
   margin-top: clamp(48px, 10vh, 128px);
   display: grid;
   grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
-  align-items: start;
+  align-items: stretch;
   gap: clamp(24px, 3vw, 56px);
 }
+/* 오른쪽 글 칸을 브랜드 필름 높이에 맞춤: 소개는 필름 윗선, 참여자 목록 마지막 줄은 필름 아랫선 (11/13) */
+.about .reel { align-self: start; }
+.about .text { display: flex; flex-direction: column; }
+.about .text dl { margin-top: auto; margin-bottom: -5px; }
+.about .text .tbox { flex: 1; }
+.about .text > :first-child { margin-top: 0; }
+.about .text .lead:first-child { margin-top: -0.4em; }
+.about .text .tbox, .about .text .lead:last-of-type, .about .text .body { margin-bottom: clamp(40px, 6vh, 72px); }
+.about .text .lead:has(+ .body) { margin-bottom: 0; }
 .film.reel { margin-top: 0; aspect-ratio: 4 / 3; }
 /* 브랜드 필름 4:3 통일 (11/11). 16:9 유튜브를 4:3 박스에 넣을 때: 높이를 꽉 채우고 가운데만 보이게 자름 (16/9 ÷ 4/3 = 133.3%) */
 .film.reel iframe { width: 133.34%; left: -16.67%; }
-.about .tbox { min-height: clamp(180px, 22vh, 260px); background: #ECECEC; display: flex; align-items: center; justify-content: center; }.about .text dl { margin-top: clamp(40px, 6vh, 72px); }
+.about .tbox { min-height: clamp(180px, 22vh, 260px); background: #ECECEC; display: flex; align-items: center; justify-content: center; }
 .about .lead { font-size: clamp(18px, 1.15vw, 22px); line-height: 1.75; font-weight: 400; letter-spacing: -0.02em; }
 .about .body { margin-top: clamp(20px, 3vh, 32px); opacity: .72; font-weight: 300; }
 .about dl { display: grid; grid-template-columns: auto 1fr; column-gap: 24px; row-gap: 10px; align-content: start; border-top: 1px solid var(--line); padding-top: 18px; }
@@ -242,7 +251,10 @@ svg, .mark img { display: block; width: 100%; height: auto; }
   .about .text { display: contents; }
   .about .lead, .about .body, .about .tbox { order: 1; }
   .about .reel { order: 2; }
-  .about .text dl { order: 3; margin-top: 0; }
+  .about .text dl { order: 3; margin-top: 0; margin-bottom: 0; }
+  .about .text .tbox, .about .text .lead:last-of-type, .about .text .body { margin-bottom: 0; }
+  .about .text .lead:first-child { margin-top: 0; }
+  .about .reel { align-self: auto; }
   .foot { flex-direction: column; gap: 6px; }
   .team ~ .foot { align-items: center; }
   .foot .keys { display: none; }
