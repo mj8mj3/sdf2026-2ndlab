@@ -51,8 +51,8 @@
       },
       "video": "https://youtu.be/ko4s1TerFhw",
       "brandFilm": "https://youtu.be/uJraLkS5YAY",
-      "poster": "",
-      "brandPoster": "",
+      "poster": "assets/thumbs/3-main.jpg",
+      "brandPoster": "assets/thumbs/3-brand.jpg",
       "logoScale": 0.78
     },
     {
@@ -67,8 +67,8 @@
       },
       "video": "https://youtu.be/eu5NG_8lGsk",
       "brandFilm": "https://youtu.be/U_OxH2unRtc",
-      "poster": "",
-      "brandPoster": ""
+      "poster": "assets/thumbs/4-main.jpg",
+      "brandPoster": "assets/thumbs/4-brand.jpg"
     },
     {
       "no": 5,
