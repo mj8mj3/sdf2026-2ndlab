@@ -174,7 +174,7 @@ svg, .mark img { display: block; width: 100%; height: auto; }
 /* 썸네일이 있는 영상: 사진을 꽉 채우고 재생 표시는 흰색 */
 .film.has-poster { background-size: cover; background-position: center; }
 .film.has-poster .play { color: #fff; text-shadow: 0 1px 8px rgba(0,0,0,.35); }
-.film.has-poster .play .tri { filter: drop-shadow(0 1px 6px rgba(0,0,0,.35)); }
+.film.has-poster .play .tri { filter: drop-shadow(0 0 6px rgba(0,0,0,.55)); }
 /* 11/19: 썸네일 속 로고와 겹치지 않게 재생 표시를 왼쪽 아래로, 글자는 숨김(읽기 도구용으로만 남김) */
 .film.has-poster .play { align-items: flex-start; justify-content: flex-end; padding: 0 0 clamp(14px, 2.2vw, 28px) clamp(16px, 2.4vw, 32px); }
 .film.has-poster .play .lbl { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
