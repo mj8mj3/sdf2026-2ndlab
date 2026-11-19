@@ -234,6 +234,9 @@ svg, .mark img { display: block; width: 100%; height: auto; }
 
 /* ---------- small screens ---------- */
 @media (max-width: 720px) {
+  /* 11/19: 모바일에서는 재생 표시를 작게 */
+  .film.has-poster .play { padding: 0 0 10px 12px; }
+  .film.has-poster .play .tri { border-left-width: 10px; border-top-width: 6px; border-bottom-width: 6px; }
   .home .intro span { display: inline; }
   .home .intro span + span::before { content: " "; }
   .home .intro { font-size: 14px; text-align: justify; text-wrap: wrap; word-break: break-all; margin-top: max(48px, calc(40svh - 171px)); }
