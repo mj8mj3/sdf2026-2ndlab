@@ -201,6 +201,9 @@ svg, .mark img { display: block; width: 100%; height: auto; }
 .about .tbox { min-height: clamp(180px, 22vh, 260px); background: #ECECEC; display: flex; align-items: center; justify-content: center; }
 .about .lead { font-size: clamp(18px, 1.15vw, 22px); line-height: 1.75; font-weight: 400; letter-spacing: -0.02em; }
 .about .body { margin-top: clamp(20px, 3vh, 32px); opacity: .72; font-weight: 300; }
+/* 1조만 한 줄 소개와 본문 사이를 조금 좁힘 (11/19 사용자 요청) */
+body[data-team="1"] .about .body { margin-top: clamp(12px, 1.8vh, 18px); }
+@media (max-width: 720px) { body[data-team="1"] .about .body { margin-top: 6px; } }
 .about dl { display: grid; grid-template-columns: auto 1fr; column-gap: 24px; row-gap: 10px; align-content: start; border-top: 1px solid var(--line); padding-top: 18px; }
 .about dl { align-items: baseline; }
 .about dt { color: var(--sub); line-height: 24px; }
