@@ -19,10 +19,10 @@
         "BI": "김리한 · 박주희",
         "MI": "박지은"
       },
-      "video": "",
-      "brandFilm": "",
-      "poster": "",
-      "brandPoster": ""
+      "video": "https://youtu.be/WX-O4_-msHo",
+      "brandFilm": "https://youtu.be/6r6o7QaCbZw",
+      "poster": "assets/thumbs/1-main.jpg",
+      "brandPoster": "assets/thumbs/1-brand.jpg"
     },
     {
       "no": 2,
@@ -34,8 +34,10 @@
         "BI": "황재영 · 김형주",
         "MI": "이하정"
       },
-      "video": "",
-      "brandFilm": ""
+      "video": "https://youtu.be/_lzn21qG1KE",
+      "brandFilm": "https://youtu.be/eiKgyg3g6YU",
+      "poster": "assets/thumbs/2-main.jpg",
+      "brandPoster": "assets/thumbs/2-brand.jpg"
     },
     {
       "no": 3,
@@ -47,8 +49,10 @@
         "BI": "김지윤 · 한태영",
         "MI": "김예담"
       },
-      "video": "",
-      "brandFilm": "",
+      "video": "https://youtu.be/ko4s1TerFhw",
+      "brandFilm": "https://youtu.be/uJraLkS5YAY",
+      "poster": "",
+      "brandPoster": "",
       "logoScale": 0.78
     },
     {
@@ -61,8 +65,10 @@
         "BI": "하예은 · 정지영",
         "MI": "신예하"
       },
-      "video": "",
-      "brandFilm": ""
+      "video": "https://youtu.be/eu5NG_8lGsk",
+      "brandFilm": "https://youtu.be/U_OxH2unRtc",
+      "poster": "",
+      "brandPoster": ""
     },
     {
       "no": 5,
@@ -74,8 +80,10 @@
         "BI": "강기쁨 · 전다진",
         "MI": "박현영"
       },
-      "video": "",
-      "brandFilm": "",
+      "video": "https://youtu.be/036-Y0ViDCM",
+      "brandFilm": "https://youtu.be/hip87oB3ojE",
+      "poster": "assets/thumbs/5-main.jpg",
+      "brandPoster": "assets/thumbs/5-brand.jpg",
       "logoScale": 0.75
     }
   ]
