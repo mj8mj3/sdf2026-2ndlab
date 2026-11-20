@@ -262,7 +262,8 @@ svg, .mark img { display: block; width: 100%; height: auto; }
   .about .text dl { order: 3; margin-top: 0; margin-bottom: 0; }
   .about .text .tbox, .about .text .lead:last-of-type, .about .text .body { margin-bottom: 0; }
   .about .text .lead:first-child { margin-top: 0; }
-  .about .reel { align-self: auto; }
+  /* 11/20: 폰에서 브랜드 필름이 사라지던 문제. 세로로 늘이기(stretch)를 쓰면 일부 폰 브라우저(사파리 등)가 4:3 높이를 0으로 계산함 → 너비를 꽉 채우고 높이는 비율로만 */
+  .about .reel { align-self: start; justify-self: stretch; width: 100%; height: auto; min-height: 0; }
   .foot { flex-direction: column; gap: 6px; }
   .team ~ .foot { align-items: center; }
   .foot .keys { display: none; }
