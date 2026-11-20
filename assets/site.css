@@ -200,8 +200,8 @@ svg, .mark img { display: block; width: 100%; height: auto; }
 .about .text .tbox, .about .text .lead:last-of-type, .about .text .body { margin-bottom: clamp(40px, 6vh, 72px); }
 .about .text .lead:has(+ .body) { margin-bottom: 0; }
 .film.reel { margin-top: 0; aspect-ratio: 4 / 3; }
-/* 브랜드 필름 4:3 통일 (11/11). 16:9 유튜브를 4:3 박스에 넣을 때: 높이를 꽉 채우고 가운데만 보이게 자름 (16/9 ÷ 4/3 = 133.3%) */
-.film.reel iframe { width: 133.34%; left: -16.67%; }
+/* 브랜드 필름 4:3 (11/20): 5개 모두 유튜브에 4:3으로 올라가 있어 자르지 않음. 예전 133% 확대는 제목·조작 막대까지 잘랐음 */
+.film.reel iframe { width: 100%; left: 0; }
 .about .tbox { min-height: clamp(180px, 22vh, 260px); background: #ECECEC; display: flex; align-items: center; justify-content: center; }
 .about .lead { font-size: clamp(18px, 1.15vw, 22px); line-height: 1.75; font-weight: 400; letter-spacing: -0.02em; }
 .about .body { margin-top: clamp(20px, 3vh, 32px); opacity: .72; font-weight: 300; }
