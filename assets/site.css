@@ -270,6 +270,8 @@ svg, .mark img { display: block; width: 100%; height: auto; }
   .bar .mark { width: 72px; }
   .bar .back span { display: none; }
   .switch { grid-template-columns: 1fr; }
+  /* 11/20: 폰에서는 '다른 프로젝트 보기' 글자 숨김(읽기 도구용으로만 남김) */
+  .switch .label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
   .switch ol { gap: 10px; justify-self: center; }
 }
 
