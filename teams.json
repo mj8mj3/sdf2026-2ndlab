@@ -45,7 +45,14 @@
       "video": "https://youtu.be/_lzn21qG1KE",
       "brandFilm": "https://youtu.be/eiKgyg3g6YU",
       "poster": "assets/thumbs/2-main.jpg",
-      "brandPoster": "assets/thumbs/2-brand.jpg"
+      "brandPoster": "assets/thumbs/2-brand.jpg",
+      "instagram": {
+        "김재한": "keemzahn",
+        "오은지": "onnzip",
+        "황재영": "hwngjaeyng",
+        "김형주": "__kimhyongju_",
+        "이하정": "hajunng"
+      }
     },
     {
       "no": 3,
@@ -99,7 +106,14 @@
       "brandFilm": "https://youtu.be/hip87oB3ojE",
       "poster": "assets/thumbs/5-main.jpg",
       "brandPoster": "assets/thumbs/5-brand.jpg",
-      "logoScale": 0.75
+      "logoScale": 0.75,
+      "instagram": {
+        "김길현": "thousandpiicesblue",
+        "문서원": "seori_won",
+        "강기쁨": "joy2meetjoy",
+        "전다진": "moray_030",
+        "박현영": "h.nyeo"
+      }
     }
   ]
 }
