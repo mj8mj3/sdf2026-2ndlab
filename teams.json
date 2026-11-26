@@ -76,7 +76,14 @@
       "video": "https://youtu.be/eu5NG_8lGsk",
       "brandFilm": "https://youtu.be/U_OxH2unRtc",
       "poster": "assets/thumbs/4-main.jpg",
-      "brandPoster": "assets/thumbs/4-brand.jpg"
+      "brandPoster": "assets/thumbs/4-brand.jpg",
+      "instagram": {
+        "이진하": "leejinha.stp",
+        "박여진": "pyeojin_ar.k",
+        "하예은": "ha_design.3._",
+        "정지영": "renoveme",
+        "신예하": "banana.archive_"
+      }
     },
     {
       "no": 5,
