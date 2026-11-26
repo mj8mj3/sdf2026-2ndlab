@@ -6,7 +6,8 @@
       "다섯 개의 팀이 폐기물을 수집하고 실험해 새로운 소재와 오브제로 만들어 낸 과정을 이곳에 기록했습니다.",
       "각 프로젝트의 영상과 브랜드 필름으로 그 과정을 만나 보세요."
     ],
-    "footer": "Seoul Design Festival 2026 — Hongik Univ. Design Convergence × LAB.CRETE"
+    "footer": "Seoul Design Festival 2026 — Hongik Univ. Design Convergence × LAB.CRETE",
+    "instagram": "second.lab_sdf"
   },
   "teams": [
     {
@@ -22,13 +23,20 @@
       "video": "https://youtu.be/WX-O4_-msHo",
       "brandFilm": "https://youtu.be/6r6o7QaCbZw",
       "poster": "assets/thumbs/1-main.jpg",
-      "brandPoster": "assets/thumbs/1-brand.jpg"
+      "brandPoster": "assets/thumbs/1-brand.jpg",
+      "instagram": {
+        "김민지": "mintrbizi",
+        "최현수": "oasiswrld",
+        "김리한": "rhankim",
+        "박주희": "heeeclub",
+        "박지은": "jieun_1"
+      }
     },
     {
       "no": 2,
       "title": "Indoor Shade",
       "summary": "끝났다고 선언된 물질과 여전히 남은 기능 사이, 그 공백의 시간을 탐구하는 브랜드",
-      "body": "하나의 뿌리에서 가지가 뻗고 과실이 맺히듯, 하나의 지지 구조에 서로 다른 높이의 차양 유닛이 연결된다.\n과실을 감싸 빛을 조절하던 과수봉지는 얇은 종이 차양으로 재구성되어, 사람이 머무는 자리에 그늘을 만든다.\n프레임을 따라 유닛의 높이와 배치를 조절하여 공간 전체의 채광을 유지하면서, 얼굴이나 신체 일부에 닿는 빛을 가릴 수 있다.\n각 부품은 분리와 조립이 가능해 다양한 사용 상황에 맞춰 구성을 바꿀 수 있다.",
+      "body": "과수봉지의 쓰임을 이어, 공간의 밝기는 유지하고 개인의 그늘을 조절하는 실내 차양.\n\n하나의 뿌리에서 가지가 뻗고 과실이 맺히듯, 하나의 지지 구조에 서로 다른 높이의 차양 유닛이 연결된다.\n과실을 감싸 빛을 조절하던 과수봉지는 얇은 종이 차양으로 재구성되어, 사람이 머무는 자리에 그늘을 만든다.\n프레임을 따라 유닛의 높이와 배치를 조절하여 공간 전체의 채광을 유지하면서, 얼굴이나 신체 일부에 닿는 빛을 가릴 수 있다.\n각 부품은 분리와 조립이 가능해 다양한 사용 상황에 맞춰 구성을 바꿀 수 있다.",
       "members": {
         "PI": "김재한 · 오은지",
         "BI": "황재영 · 김형주",

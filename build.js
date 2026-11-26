@@ -27,12 +27,13 @@ const head = (title, desc, root) => `<!doctype html>
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="${root}assets/favicon.svg?v=4" type="image/svg+xml">
 <link rel="stylesheet" href="${root}assets/fonts/fonts.css">
-<link rel="stylesheet" href="${root}assets/site.css?v=20261120c">
+<link rel="stylesheet" href="${root}assets/site.css?v=20261126c">
 </head>`;
 
 const foot = (root) => `<footer class="foot mono rv" style="--i:9">
   <span>${esc(data.site.footer)}</span>
-</footer>
+${data.site.instagram ? `  <span class="ig-site">Instagram <b>@${esc(data.site.instagram)}</b></span>
+` : ""}</footer>
 <script src="${root}assets/site.js?v=20261111f" defer></script>
 </body>
 </html>
@@ -72,7 +73,12 @@ fs.writeFileSync(path.join(D, "index.html"), home);
 for (const t of T) {
   const r = "../";
   const ORDER = ["PI", "BI", "MI"];
-  const members = Object.entries(t.members || {}).sort((a, b) => (ORDER.indexOf(a[0]) + 1 || 99) - (ORDER.indexOf(b[0]) + 1 || 99)).map(([k, v]) => `<dt class="ko">${esc(k)}</dt><dd>${esc(v)}</dd>`).join("");
+  const members = Object.entries(t.members || {}).sort((a, b) => (ORDER.indexOf(a[0]) + 1 || 99) - (ORDER.indexOf(b[0]) + 1 || 99)).map(([k, v]) => {
+    // 11/26: 1조 요청 — 이름 옆에 개인 인스타 아이디 표시(링크 없음). instagram이 없는 조는 예전 그대로
+    const ig = t.instagram || {};
+    const dd = Object.keys(ig).length ? String(v).split(" · ").map((n) => ig[n] ? `<span class="pp">${esc(n)}<span class="ig">@${esc(ig[n])}</span></span>` : `<span class="pp">${esc(n)}</span>`).join("") : esc(v);
+    return `<dt class="ko">${esc(k)}</dt><dd>${dd}</dd>`;
+  }).join("");
   const page = `${head(`${t.no}조${t.title ? ` · ${t.title}` : ""} — 2nd LAB`, t.summary || data.site.intro.join(" "), r)}
 <body data-root="${r}" data-team="${t.no}">
 <header class="bar">

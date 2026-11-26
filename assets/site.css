@@ -285,3 +285,10 @@ svg, .mark img { display: block; width: 100%; height: auto; }
   ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
   * { transition: none !important; }
 }
+
+/* 11/26: 1조 멤버 인스타 아이디 표시(링크 없음). 한 사람씩 한 줄, 아이디는 회색 */
+.about dd .pp { display: block; }
+.about dd .ig { margin-left: .6em; color: var(--sub); }
+/* 11/26: 모든 페이지 푸터에 2nd LAB 인스타 아이디 한 줄(링크 없음). 기존 문구 아래 가운데 */
+.foot:has(.ig-site) { flex-direction: column; align-items: center; gap: 6px; }
+.foot .ig-site b { font-weight: inherit; text-transform: none; color: inherit; }
